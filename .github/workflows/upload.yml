@@ -1,11 +1,10 @@
 on:
     push:
-      paths:
+        paths:
         - 'Dynamic/activity1/**' 
+name: 🚀 Deploy website on push
   
-  name: 🚀 Deploy website on push
-  
-  jobs:
+jobs:
     web-deploy:
       name: 🎉 Deploy
       runs-on: ubuntu-latest
@@ -17,7 +16,7 @@ on:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftpupload.net
-          username: if0_36518205
+          username: if0_36643811
           password: ${{ secrets.password }}
           protocol: ftps
           port: 21
